@@ -1,0 +1,520 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 80px;
+}
+
+p {
+  font-family: "Red Hat Display", "Sans serif";
+  font-weight: 400;
+  font-size: 18px;
+}
+
+section {
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+  cursor: pointer;           /* Change cursor on hover */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+  opacity: 0.7;
+}
+
+.navbar {
+  display: flex;            
+  align-items: center;      
+  justify-content: space-around; 
+  padding: 2px 4px;           
+  background-color: white;
+  position: fixed;             
+  top: 0;
+  left: 0;                    
+  right: 0;                   
+  z-index: 1000;              
+  height: 60px;
+}
+
+body {
+  margin-top: 60px;          /* Add margin to prevent overlap */
+}
+
+.logo {
+  display: flex;            
+  align-items: center;      
+}
+
+.logo img {
+  width: 60px;
+  margin: 0;               
+  padding: 0;              
+}
+
+.main-menu {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0; 
+  padding: 0; 
+  justify-content: center; 
+  flex-grow: 1; 
+}
+
+.main-menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.5s;
+}
+
+/* Updated selector to apply underline only to links in the menu */
+.main-menu ul a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjusts position of underline */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: black;
+  transition: width 0.5s;
+}
+
+.main-menu a:hover {
+  color: rgb(110, 7, 243);
+}
+
+.main-menu a:hover::after {
+  width: 100%; /* Expands underline smoothly */
+}
+
+.main-menu li {
+  margin-left: 15px; /* Adjusted margin for spacing */
+}
+
+/* Contact button styles */
+.contact_button {
+  font-family: "Poppins", "sans-serif";
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  padding: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+  margin-right: 20px;
+}
+
+.contact_button:hover {
+  background-color: white;
+  color: white;
+}
+
+
+i {
+  margin-right: 5px;
+} 
+
+.about_me_page {
+  position: relative; /* Necessary for z-index to work */
+  z-index: 2;
+  display: flex;
+  justify-content: center; /* Remove align-items if you want it closer to the top */
+  background-color: rgb(110, 7, 243);
+  padding-top: 20px; /* Optional: Adds space between section and navbar */
+  height: 400px;
+  position: relative; /* Set position */
+  z-index: 2; /* Ensure it's on top */
+}
+
+.about_me_page .left-col{
+  width: 70%;
+  padding: 0px;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.left-col {
+  transition: drop-shadow 0.3ms;
+  -webkit-transition: drop-shadow 0.3ms;
+  -moz-transition: drop-shadow 0.3ms;
+  -ms-transition: drop-shadow 0.3ms;
+  -o-transition: drop-shadow 0.3ms;
+}
+.left_col:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7); /* Optional: adds a glow effect on hover */
+}
+
+.left_col_title  {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 5px; /* Reduced margin */
+  text-align: center;
+  color: white;
+}
+
+.left_col_p  {
+  font-size: 28px;
+  line-height: 26px;
+  text-align: justify;
+  padding: 10px;
+  margin-top: 0; /* Removed extra margin */
+  margin-bottom: 12px;
+  color: white;
+  width: auto;
+  text-shadow: 3px;
+
+}
+
+
+
+.right-col {
+  float: right;
+}
+
+.profile_gif {
+  width: 300px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: 5px solid white; /* Adjust thickness of the border */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Optional: adds a glow effect */
+  margin-right: 25px;
+  margin-top: 25px;
+}
+
+.skills_page {
+
+  display: flex;
+  justify-content: center; /* Removes align-items if you want it closer to the top */
+  background-color: white;
+  padding-top: 20px; /* Optional: Adds space between section and navbar */
+  height: 600px;
+  position: relative; /* Necessary for z-index to work */
+  z-index: 1; /* Background */ /* Ensure it's on top */
+}
+
+.card {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Change direction if needed */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  background-color: white; /* Card background color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Space inside the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  margin: 20px; /* Space around the card */
+  width: 300px; /* Set a width for the card */
+  background-color: white; /* Initial background color */
+  color: black; /* Initial text color */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Initial shadow */
+}
+
+.card:hover {
+  background-color: rgb(110, 7, 243); /* Changes to purple on hover */
+  color: white; /* Changes all text to white on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adds a larger shadow on hover */
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.icon-container i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px; /* Ensures icon size is visible */
+  color: white; /* Icon color */
+  background-color: rgb(110, 7, 243);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 65px; /* Same width and height for a perfect circle */
+  height: 65px;
+  border-radius: 50%; /* Makes it a perfect circle */
+}
+
+.card:hover .icon-container i  {
+  background-color: rgb(91, 233, 185) /* Changes icon background to green on hover */
+}
+
+
+.Card_Title {
+  font-size: 20px;
+  font-weight:400;
+  margin-bottom: 10px;
+  color: rgb(110, 7, 243); /* Initial color */
+  text-align: center;
+  transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.card:hover .Card_Title {
+  color: rgb(91, 233, 185) /* Text turns white when hoverixwng over .card */
+}
+
+.Card_Description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: black; /* Initial color */
+  text-align: center;
+  transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.card:hover .Card_Description {
+  color: white; /* Text turns white when hovering over .card */
+}
+
+.My_Why {
+  font-size: 20px;
+  font-weight:400;
+  margin-bottom: 10px;
+  color: rgb(110, 7, 243); /* Initial color */
+  text-align: center;
+  margin-top: 8px;
+  transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.card:hover .My_Why {
+  color: rgb(91, 233, 185) /* Text turns white when hovering over .card */
+}
+
+.Card_Reasoning {
+  text-align: center;
+  font-size: 16px;
+  color: black; /* Initial color */
+  transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.card:hover .Card_Reasoning {
+  color: white; /* Text turns white when hovering over .card */
+}
+
+.skills_page i {
+  font-size: 24px;
+  color: white;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.Projects {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background: linear-gradient(to right, rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.9)), url(/images/—Pngtree—grey\ gradient\ abstract\ studio\ background_1207032.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  gap: 40px; /* Increased gap between image and text */
+  padding: 20px;
+  width: 90%;
+  margin-bottom: 50px; /* Increased space between projects */
+  border-radius: 10px; /* Optional: adds a rounded corner effect */
+}
+
+
+.common_project_img_1 {
+  width: 650px; /* Set to desired consistent width */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.common_project_img_2 {
+  width: 725px; /* Set to desired consistent width */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+
+
+.projects_img img:hover {
+  transform: scale(1.1);
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  padding: 20px; /* Adds padding within the text area */
+  text-align: left;
+  margin-left: -300px; /* Reduces gap between info and image */
+}
+
+.project_h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 2px; /* Reduced spacing between h2 and description */
+  text-align: left;
+  text-transform: uppercase;
+  
+}
+
+.project_description {
+  font-size: 1.6rem;
+  margin-bottom: 18px; /* Reduced spacing between description and button */
+  padding: 10px;
+  text-align: left;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.project_button {
+  background-color: rgb(110, 7, 243);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  transition: opacity 0.3s ease;
+  margin: 30px;
+  align-self: flex-start;
+}
+
+.project_button:hover {
+  opacity: 0.8;
+}
+
+.project_button:active {
+  opacity: 0.6;
+}
+
+.button_container {
+  margin-top: 10px;
+}
+
+.contact_section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+
+.contact_img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 32px;
+  box-shadow: 0 0 1px black;/* Optional: adds a glow effect on hover */
+  margin-top: 50px;
+}
+
+.contact {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.contact_p {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: black;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.icon-container_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.icon-container_buttons a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon-container_buttons a i {
+  font-size: 22px;
+  color: white;
+  background-color: rgb(110, 7, 243);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  border-radius: 50%; /* Ensures a perfect circle */
+  display: flex; /* Center icon horizontally and vertically */
+  align-items: center; /* Center icon vertically */
+  justify-content: center; /* Center icon horizontally */
+  margin-bottom: 35px;
+  transition: background-color 0.5s ease;
+}
+
+.icon-container_buttons a i:hover {
+  background-color: rgb(91, 233, 185);
+}
